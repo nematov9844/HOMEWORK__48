@@ -1,3 +1,20 @@
+
+
+let string = "4u34h4jht3h4";
+
+function editnumbers(num){
+  let element = 0;
+  for (let i = 0; i < num.length; i++) {
+      if (!isNaN(+num[i])) {
+      element += +num[i]
+    }
+  }
+  return element;
+}
+console.log(editnumbers(string))
+
+
+
 // 1. nums = [4,5,6,7,0,1,2], target = 0 => mana shu nums array ichida target teng bo'lgan qiymatning nechinchi indexda turganini aniqlang rasult=>[ index ]
 
 // nums = [4,5,6,7,0,1,2]
