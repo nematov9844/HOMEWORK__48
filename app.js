@@ -33,36 +33,21 @@ function indexTop(params) {
 
 // 2. nums = [1,3,2,4,5,6,99,102], target = 5, o'sish va kamayish tartibli array ichida target qiymati array ichida nechinchi qiymatda turganini aniqlang
 
-function findTargetIndex(nums, target) {
-  const numsSorted = nums.slice().sort((a, b) => a - b);
-
-  function binarySearch(arr, x) {
-    let low = 0;
-    let high = arr.length - 1;
-
-    while (low <= high) {
-      const mid = Math.floor((high + low) / 2);
-
-      if (arr[mid] < x) {
-        low = mid + 1;
-      } else if (arr[mid] > x) {
-        high = mid - 1;
-      } else {
-        return mid;
+function ediNum(nums, target) {
+    for (let i = 0; i < nums.length; i++) {
+      if (nums[i] === target) {
+        return i;
       }
     }
     return -1;
   }
+  
+  const nums = [1, 3, 2, 4, 5, 6, 99, 102];
+  const target = 5;
+  const index = ediNum(nums, target);
+  
+  console.log(index);
 
-  const index = binarySearch(numsSorted, target);
-  return index;
-}
-
-const nums = [1, 3, 2, 4, 5, 6, 99, 102];
-const target = 5;
-const index = findTargetIndex(nums, target);
-
-console.log(index);
 
 // 3.ixtiyoriy object yaratilsin va key va valuesi kamida 4 ta bo'lsin 1. key larini ro'yxati chiqarilsin 2. value larining ro'yxati chiqarilsin
 
