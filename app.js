@@ -23,8 +23,8 @@ function indexTop(params) {
   let result = [];
   for (let i = 0; i < params.length; i++) {
     console.log(params[i]);
-    if (params[i] === 4) {
-      result.push(params[i]);
+    if (params[i] === 0) {
+      result.push(i);
     }
   }
   return result;
